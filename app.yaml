@@ -1,0 +1,16 @@
+command: [
+  "uvicorn",
+  "server.app:app"
+]
+
+env:
+  - name: DATABRICKS_GENIE_SPACE_ID
+    # IMPORTANT: Replace with your actual Genie space ID
+    # Get it from: https://[workspace]/genie/rooms/[SPACE_ID]
+    value: "${DATABRICKS_GENIE_SPACE_ID}"
+  - name: DATABRICKS_TOKEN
+    # Token for Genie API access - set via environment variable
+    value: "${DATABRICKS_TOKEN}"
+  - name: DATABRICKS_HOST
+    # Databricks workspace host
+    value: "${DATABRICKS_HOST}"
