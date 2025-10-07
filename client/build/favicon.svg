@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Simplified wind turbine icon for favicon -->
+  <rect width="32" height="32" fill="#10b981" rx="4"/>
+
+  <!-- Tower -->
+  <rect x="15" y="16" width="2" height="12" fill="white" />
+  <polygon points="14,28 18,28 17,16 15,16" fill="white" />
+
+  <!-- Hub -->
+  <circle cx="16" cy="15" r="1.5" fill="white" />
+
+  <!-- Blades -->
+  <g transform="translate(16,15)">
+    <path d="M 0,-1 Q -1,-4 -0.5,-9 Q 0,-10 0.5,-9 Q 1,-4 0,-1" fill="white" transform="rotate(0)" />
+    <path d="M 0,-1 Q -1,-4 -0.5,-9 Q 0,-10 0.5,-9 Q 1,-4 0,-1" fill="white" transform="rotate(120)" />
+    <path d="M 0,-1 Q -1,-4 -0.5,-9 Q 0,-10 0.5,-9 Q 1,-4 0,-1" fill="white" transform="rotate(240)" />
+  </g>
+</svg>

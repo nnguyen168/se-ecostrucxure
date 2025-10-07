@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="windGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#f0fdf4" stroke="#10b981" stroke-width="2"/>
+
+  <!-- Wind turbine tower -->
+  <rect x="30" y="32" width="4" height="24" fill="url(#windGradient)" />
+  <polygon points="28,56 36,56 34,32 30,32" fill="url(#windGradient)" />
+
+  <!-- Turbine hub -->
+  <circle cx="32" cy="30" r="3" fill="#059669" />
+
+  <!-- Turbine blades -->
+  <g transform="translate(32,30)">
+    <!-- Blade 1 -->
+    <path d="M 0,-2 Q -2,-8 -1,-18 Q 0,-20 1,-18 Q 2,-8 0,-2" fill="url(#windGradient)" transform="rotate(0)" />
+    <!-- Blade 2 -->
+    <path d="M 0,-2 Q -2,-8 -1,-18 Q 0,-20 1,-18 Q 2,-8 0,-2" fill="url(#windGradient)" transform="rotate(120)" />
+    <!-- Blade 3 -->
+    <path d="M 0,-2 Q -2,-8 -1,-18 Q 0,-20 1,-18 Q 2,-8 0,-2" fill="url(#windGradient)" transform="rotate(240)" />
+  </g>
+
+  <!-- Wind lines for effect -->
+  <path d="M 8,25 Q 12,25 16,24" stroke="#93c5fd" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" />
+  <path d="M 10,30 Q 14,30 18,29" stroke="#93c5fd" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" />
+  <path d="M 46,26 Q 50,26 54,25" stroke="#93c5fd" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" />
+</svg>
