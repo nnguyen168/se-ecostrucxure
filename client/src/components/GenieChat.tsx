@@ -16,7 +16,8 @@ import {
   ChevronDown,
   ChevronRight,
   Table,
-  ExternalLink
+  ExternalLink,
+  Plus
 } from 'lucide-react';
 
 interface Message {
@@ -158,6 +159,20 @@ export const GenieChat: React.FC = () => {
     window.open(genieUrl, '_blank');
   };
 
+  const startNewChat = () => {
+    // Reset the conversation state
+    setConversationId(null);
+    setMessages([{
+      id: Date.now().toString(),
+      content: "Hello! I'm your AI-powered Wind Fleet Assistant. I can help you analyze turbine data, predict maintenance needs, and provide insights about your fleet. What would you like to know?",
+      sender: 'assistant',
+      timestamp: new Date()
+    }]);
+    setInput('');
+    setError(null);
+    setShowSqlFor(new Set());
+  };
+
   return (
     <div className="flex flex-col h-[700px] bg-white rounded-lg border border-gray-200">
       {/* Chat Header */}
@@ -175,6 +190,18 @@ export const GenieChat: React.FC = () => {
           <Badge variant={conversationId ? "default" : "secondary"}>
             {conversationId ? 'Connected' : 'New Session'}
           </Badge>
+          {conversationId && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={startNewChat}
+              className="flex items-center gap-1"
+              title="Start a new chat session"
+            >
+              <Plus className="w-4 h-4" />
+              New Chat
+            </Button>
+          )}
           <Button
             variant="outline"
             size="sm"

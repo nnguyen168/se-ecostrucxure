@@ -8,6 +8,8 @@ import { Progress } from '@/components/ui/progress';
 import { Separator } from '@/components/ui/separator';
 import { GenieChat } from '@/components/GenieChat';
 import { WorkingFleetMap } from '@/components/WorkingFleetMap';
+import { NotificationsDropdown } from '@/components/NotificationsDropdown';
+import { SettingsDropdown } from '@/components/SettingsDropdown';
 import {
   Wind,
   AlertTriangle,
@@ -166,13 +168,8 @@ export const TurbineFleetDashboard: React.FC = () => {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="icon" className="relative">
-                <Bell className="w-5 h-5 text-gray-600" />
-                <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Settings className="w-5 h-5 text-gray-600" />
-              </Button>
+              <NotificationsDropdown />
+              <SettingsDropdown />
               <Separator orientation="vertical" className="h-8" />
               <div className="flex items-center space-x-3">
                 <div className="text-right">
