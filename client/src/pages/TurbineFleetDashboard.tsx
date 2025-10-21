@@ -158,12 +158,12 @@ export const TurbineFleetDashboard: React.FC = () => {
             <div className="flex items-center space-x-3">
               <img
                 src="/android-chrome-192x192.png"
-                alt="EcoStruxure Logo"
+                alt="Wind Fleet Logo"
                 className="w-10 h-10"
               />
               <div>
-                <h1 className="text-xl font-semibold text-gray-900">EcoStruxure</h1>
-                <p className="text-xs text-gray-500">Wind Fleet Management</p>
+                <h1 className="text-xl font-semibold text-gray-900">Wind Fleet Management</h1>
+                <p className="text-xs text-gray-500">Turbine Monitoring System</p>
               </div>
             </div>
 
@@ -173,7 +173,7 @@ export const TurbineFleetDashboard: React.FC = () => {
               <Separator orientation="vertical" className="h-8" />
               <div className="flex items-center space-x-3">
                 <div className="text-right">
-                  <p className="text-sm font-medium text-gray-900">Bachar Wehbi</p>
+                  <p className="text-sm font-medium text-gray-900">Nam Nguyen</p>
                   <p className="text-xs text-gray-500">Senior Field Technician</p>
                 </div>
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
@@ -190,7 +190,7 @@ export const TurbineFleetDashboard: React.FC = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <Card>
             <CardHeader>
-              <CardTitle className="text-xl font-semibold">Fleet Management System</CardTitle>
+              <CardTitle className="text-xl font-semibold">Wind Fleet Management</CardTitle>
               <CardDescription className="text-sm text-gray-500">Comprehensive turbine fleet operations and analytics</CardDescription>
             </CardHeader>
             <CardContent>
