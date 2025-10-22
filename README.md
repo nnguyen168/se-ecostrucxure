@@ -1,10 +1,10 @@
-# 🚀 Claude Code + Databricks App Template
+# 🌬️ Wind Turbine Fleet Management Dashboard
 
-A modern, full-stack application template for building Databricks Apps with Python FastAPI backend and React TypeScript frontend. 
+A modern **Wind Turbine Fleet Management System** built on Databricks Apps, demonstrating enterprise-grade monitoring, predictive maintenance, and AI-powered insights for renewable energy operations.
 
 **[Claude Code](https://claude.ai/code)-centric workflow** - a single `/dba` command transforms your ideas into deployed applications. Claude guides you through product requirements, technical design, implementation, and deployment. It knows the entire Databricks Apps ecosystem and self-heals by automatically diagnosing and fixing issues.
 
-The `/dba` workflow acts as your product strategist and development architect - brainstorming ideas with you, then building everything all the way to deployment.
+Built with FastAPI backend, React TypeScript frontend, and seamless Databricks integration for real-time analytics and AI capabilities.
 
 ![Databricks Apps](https://img.shields.io/badge/Databricks-Apps-orange)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-green)
@@ -100,8 +100,18 @@ The `setup.sh` script will help you install any missing dependencies with intera
 
 ---
 
-## ✨ Features
+## 🎯 Application Features
 
+### Wind Turbine Fleet Management
+- **📊 Real-time Fleet Monitoring** - Track 156+ turbines across 6 major US wind farms
+- **🗺️ Interactive Geographic Map** - Visualize turbine locations with status indicators and clustering
+- **📈 Performance Analytics** - Energy production charts, fleet health metrics, and KPI dashboards
+- **🤖 AI-Powered Assistant** - Integrated Databricks Genie chatbot for natural language fleet queries
+- **🔧 Predictive Maintenance** - Schedule and track maintenance with health scoring algorithms
+- **⚡ Energy Output Tracking** - Real-time and historical energy production monitoring (GWh)
+- **🚨 Alert Management** - Prioritized notifications for turbine issues and maintenance needs
+
+### Technical Features
 - **🔥 Hot Reloading** - Instant updates for both Python backend and React frontend
 - **🔄 Auto-Generated API Client** - TypeScript client automatically generated from FastAPI OpenAPI spec
 - **🔐 Databricks Authentication** - Integrated with Databricks SDK for seamless workspace integration
@@ -116,25 +126,29 @@ The `setup.sh` script will help you install any missing dependencies with intera
 ├── server/                    # FastAPI backend
 │   ├── app.py                 # Main application
 │   ├── routers/               # API route handlers
-│   │   └── __init__.py        # Example router
+│   │   ├── turbine.py        # Wind turbine fleet endpoints
+│   │   ├── genie.py          # AI assistant integration
+│   │   └── user.py           # User authentication
 │   └── services/              # Business logic
 │
 ├── client/                    # React frontend
 │   ├── src/
 │   │   ├── pages/            # React pages
+│   │   │   └── TurbineFleetDashboard.tsx
 │   │   ├── components/       # UI components
+│   │   │   ├── FleetMap*.tsx    # Map visualizations
+│   │   │   ├── GenieChat.tsx    # AI chat interface
+│   │   │   └── ui/              # shadcn components
 │   │   ├── lib/             # Utilities
 │   │   └── fastapi_client/  # Generated API client
 │   ├── package.json         # Frontend dependencies
 │   └── vite.config.ts       # Vite configuration
 │
-├── setup_utils/               # Modular setup system
-│   ├── utils.sh              # Shared utilities
-│   ├── check_git.sh          # Git dependency check
-│   ├── check_uv.sh           # uv package manager check
-│   ├── check_bun.sh          # Bun package manager check
-│   ├── check_node.sh         # Node.js 18+ check
-│   └── check_homebrew.sh     # Homebrew check (macOS)
+├── docs/                      # Documentation
+│   └── databricks_apis/       # Databricks integration guides
+│       ├── databricks_sdk.md
+│       ├── mlflow_genai.md
+│       └── model_serving.md
 │
 ├── scripts/                   # Development automation
 │   ├── watch.sh             # Development server
@@ -180,12 +194,12 @@ This runs both servers in the background:
 
 ### 3. View Your App
 
-Open http://localhost:5173 to see the beautiful welcome page with:
-- Getting Started guide
-- Claude Commands reference
-- Tech Stack overview
-- Project Structure visualization
-- Current user information from Databricks
+Open http://localhost:5173 to see the Wind Turbine Fleet Dashboard with:
+- Real-time fleet KPIs and health metrics
+- Interactive map showing turbine locations across US wind farms
+- Energy production charts and analytics
+- AI-powered Genie assistant for fleet insights
+- Predictive maintenance scheduling interface
 
 ## 🧠 Claude Commands
 
@@ -349,12 +363,15 @@ The deployment script automatically:
 - **Authentication**: Verify `.env.local` configuration
 - **CLI outdated**: Since we use `databricks`, the CLI is always up-to-date
 
-## 📝 Customization
+## 📝 Customization for Your Use Case
 
-1. **Update branding** in `client/src/pages/WelcomePage.tsx`
-2. **Add new API endpoints** in `server/routers/`
-3. **Create UI components** in `client/src/components/`
-4. **Modify authentication** in `scripts/setup.sh`
+### Adapting the Wind Turbine Template
+1. **Replace turbine data** in `server/routers/turbine.py` with your own data sources
+2. **Modify KPIs** in `TurbineFleetDashboard.tsx` for your metrics
+3. **Update map locations** in `FleetMap` components for your assets
+4. **Integrate real data** - Connect to Databricks tables, Unity Catalog, or SQL warehouses
+5. **Add ML models** - Use Databricks Model Serving for predictive maintenance
+6. **Customize Genie** - Configure AI assistant for your domain-specific queries
 
 ## 🐛 Troubleshooting
 
@@ -484,10 +501,17 @@ rm -f /tmp/databricks-app-watch.log
 
 ## 📚 Learn More
 
+### Wind Energy & Fleet Management
+- [US Wind Turbine Database](https://eerscmap.usgs.gov/uswtdb/)
+- [Wind Energy Technologies Office](https://www.energy.gov/eere/wind/wind-energy-technologies-office)
+- [IEA Wind Technology Roadmap](https://www.iea.org/reports/wind-electricity)
+
+### Technical Documentation
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [React Documentation](https://react.dev/)
 - [Databricks Apps](https://docs.databricks.com/en/dev-tools/databricks-apps/index.html)
 - [shadcn/ui Components](https://ui.shadcn.com/)
+- [Databricks SDK for Python](https://databricks-sdk-py.readthedocs.io/)
 
 ## 🤝 Contributing
 
@@ -499,6 +523,6 @@ rm -f /tmp/databricks-app-watch.log
 
 ---
 
-**Ready to build something amazing?** 🎉
+**Ready to power the renewable energy revolution?** 🌬️⚡
 
-Start with `./setup.sh` and let this template accelerate your Databricks app development!
+Start with `./setup.sh` and build your own Wind Turbine Fleet Management system on Databricks!

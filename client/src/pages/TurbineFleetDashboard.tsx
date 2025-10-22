@@ -483,7 +483,7 @@ export const TurbineFleetDashboard: React.FC = () => {
                   </div>
                   <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                     <iframe
-                      src="https://one-env-nam-nguyen-workspace-classic.cloud.databricks.com/embed/dashboardsv3/01f0a2bbd98c1bcbb19ce3de2416d407?o=3500980823973775&f_7afb9ef1%7E55251e89=0336f273-8fac-d327-a6a7-323544d90807"
+                      src="https://e2-demo-field-eng.cloud.databricks.com/embed/dashboardsv3/01f0ae5745c817b6bf317c832dc0a7b6?o=1444828305810485&f_7afb9ef1%7E55251e89=0102fe7c-5c53-73e0-8af3-36bb0d6ed3c5"
                       width="100%"
                       height="600"
                       frameBorder="0"
@@ -502,7 +502,7 @@ export const TurbineFleetDashboard: React.FC = () => {
                   </div>
                   <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                     <iframe
-                      src="https://one-env-nam-nguyen-workspace-classic.cloud.databricks.com/embed/dashboardsv3/01f0a2bbd9be14e796c3a0952f0b7f36?o=3500980823973775"
+                      src="https://e2-demo-field-eng.cloud.databricks.com/embed/dashboardsv3/01f0ae5746c71826a374e6faed0b9097?o=1444828305810485"
                       width="100%"
                       height="600"
                       frameBorder="0"
